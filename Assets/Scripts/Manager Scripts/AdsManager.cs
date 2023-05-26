@@ -8,13 +8,13 @@ public class AdsManager : MonoBehaviour {
 
 #if UNITY_IOS
     void Awake() {
-        Advertisement.Initialize("2656494"); // your iOS AppStore game ID
+       // Advertisement.Initialize("2656494"); // your iOS AppStore game ID
     }
 #endif
 
 #if UNITY_ANDROID
     void Awake() {
-        Advertisement.Initialize("2656493"); // your Google Playstore game ID
+        //Advertisement.Initialize("2656493"); // your Google Playstore game ID
     }
 #endif
 
