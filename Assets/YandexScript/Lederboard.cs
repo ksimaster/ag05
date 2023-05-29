@@ -4,15 +4,16 @@ using UnityEngine;
 public class Lederboard : MonoBehaviour
 {
     public string nameScene;
+    public GameObject DeathPanel;
+    private int i = 0;
     void Start()
     {
-        if(nameScene == "Menu") SetHighScoreOnLederboard();
+        if(nameScene == "Menu" && nameScene == "Game") SetHighScoreOnLederboard();
         if (!PlayerPrefs.HasKey("HighScore")) PlayerPrefs.SetInt("HighScore", 0);
     }
 
     public void SetHighScoreOnLederboard()
     {
-        
         int best = PlayerPrefs.GetInt("HighScore");
 #if UNITY_WEBGL && !UNITY_EDITOR
     	WebGLPluginJS.SetLeder(best);
@@ -31,7 +32,13 @@ public class Lederboard : MonoBehaviour
 
     private void Update()
     {
-        HighScore();
+        // HighScore();
+
+        if (DeathPanel.activeSelf && i > 0) 
+        {
+            SetHighScoreOnLederboard();
+            i+=1;
+        } 
     }
 
 

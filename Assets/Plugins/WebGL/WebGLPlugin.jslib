@@ -10,12 +10,12 @@ mergeInto(LibraryManager.library, {
       window.showShare();
    },
       // Function SetLeder(add ksimaster)
-      /*
+      
    SetLeder: function (value) {
       setLederboard(value);
-   }, */
+   }, 
    // Function GetAuth(add ksimaster)
-   /*
+   
    GetAuth: function () {
       //var player;
       var isAuthorzation = "no";
@@ -33,8 +33,8 @@ mergeInto(LibraryManager.library, {
    // Function SetAuth(add ksimaster)
    SetAuth: function () {
       setAuth();
-   }, */
-   // Function GetAuth(add ksimaster)
+   }, 
+    // Function GetAdsOpen (add ksimaster)
    GetAdsOpen: function () {
       //var player;
       var isAd = "no";
