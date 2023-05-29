@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour {
     public class UnityE_Bool : UnityEvent<bool> { }
     public class UnityE_Float : UnityEvent<float> { }
 
-    public AdsManager adsManagerObject;
+   // public AdsManager adsManagerObject;
     //public CameraShake cameraShakeObject;
 
     public static AudioSource hurt;
@@ -159,22 +159,23 @@ public class GameManager : MonoBehaviour {
         shieldBreak = GameObject.Find("ShieldBreak").GetComponent<AudioSource>();
         comboUp = GameObject.Find("ComboUp").GetComponent<AudioSource>();
 
-        tryAgainButton = GameObject.Find("Try Again Button").GetComponent<Button>();
+        // поиск кнопок и текстов, заменяем на загрузку в скрипт
+        //tryAgainButton = GameObject.Find("Try Again Button").GetComponent<Button>();
         //submitName = GameObject.Find("SubmitName").GetComponent<InputField>();
         //submitButton = GameObject.Find("SubmitButton").GetComponent<Button>();
-        mainMenuButton = GameObject.Find("Main Menu Button").GetComponent<Button>();
-        watchAdButton = GameObject.Find("WatchAdButton").GetComponent<Button>();
-        giveUpButton = GameObject.Find("GiveUpButton").GetComponent<Button>();
-        scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
-        shareButton = GameObject.Find("Share Button").GetComponent<Button>();
-
+       // mainMenuButton = GameObject.Find("Main Menu Button").GetComponent<Button>();
+       // watchAdButton = GameObject.Find("WatchAdButton").GetComponent<Button>();
+       // giveUpButton = GameObject.Find("GiveUpButton").GetComponent<Button>();
+        //scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
+        //shareButton = GameObject.Find("Share Button").GetComponent<Button>();
+        //конец поиска кнопок и текстов
         //mainMenuBtnObj = mainMenuButton.gameObject;
         //mainMenuPosition = mainMenuBtnObj.transform.position;
         //initiatedMenuPosition = mainMenuBtnObj.transform.position;
 
         //tryAgainButton.onClick.AddListener(PlayAgain);
         //submitButton.onClick.AddListener(SubmitScore);
-        mainMenuButton.onClick.AddListener(MainMenuClicked);
+       // mainMenuButton.onClick.AddListener(MainMenuClicked); // эту тоже отключили
     }
 
     private void OnEnable() {
@@ -407,7 +408,7 @@ public class GameManager : MonoBehaviour {
         //UpdateLives();
     }
 
-
+    // играть снова для реварда
     public void PlayAgainWithAds(float chance) {
         //death.SetActive(false);
         //gameIsRunning = true;
@@ -420,7 +421,7 @@ public class GameManager : MonoBehaviour {
         if (Random.Range(0f, 1f) <= chance) {
             Time.timeScale = 0;
             pauseButton.SetActive(false);
-            adsManagerObject.ShowVideoAd();
+           // adsManagerObject.ShowVideoAd();
         } else {
             PlayAgain();
         }

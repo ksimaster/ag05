@@ -2667,6 +2667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameScene: Menu
+  DeathPanel: {fileID: 678570003}
 --- !u!1 &1258101268
 GameObject:
   m_ObjectHideFlags: 0

@@ -132,19 +132,19 @@
     .then(ysdk => {
       console.log('Yandex SDK initialized');
       sdk = ysdk;
-      //initPlayer();
-      
+      initPlayer();
+      /*
       if(sdk.deviceInfo.isDesktop())
       {
           isDevice = 'desktop';
       }
-      
+      */
       //console.log(sdk.deviceInfo.isDesktop());
       showAdInterstitial();
-      /*if (!(player.getMode() === 'lite')) 
+      if (!(player.getMode() === 'lite')) 
         {
           setAuth();
-         } */
+         } 
       });
     var player;
     // инициализация игрока (вызывается через другие функции)

@@ -1867,7 +1867,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9422a719d138d8c459aa0dfeda871ff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  adsManagerObject: {fileID: 0}
   pauseButton: {fileID: 1633091632}
   debugKeysEnabled: 1
   objectShake: {fileID: 393024954}
@@ -5582,6 +5581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameScene: Game
+  DeathPanel: {fileID: 721406302}
 --- !u!1 &1126240607
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Advertisements;
+//using UnityEngine.Advertisements;
 
 public class AdsManager : MonoBehaviour {
     public GameObject pauseButton;
@@ -19,7 +19,7 @@ public class AdsManager : MonoBehaviour {
 #endif
 
 
-
+    /*
     public void ShowRewardedAd() {
         Debug.Log(string.Format("Platform is {0}supported\nUnity Ads {1}initialized", Advertisement.isSupported ? "" : "not ", Advertisement.isInitialized ? "" : "not "));
         const string RewardedPlacementId = "rewardedVideo";
@@ -49,8 +49,8 @@ public class AdsManager : MonoBehaviour {
         Advertisement.Show(RewardedPlacementId, options);
 
     }
-
-
+    */
+    /*
     private void HandleShowResult(ShowResult result) {
         switch (result) {
             case ShowResult.Finished:
@@ -68,7 +68,8 @@ public class AdsManager : MonoBehaviour {
                 break;
         }
     }
-
+    */
+    /*
     private void HandleResultForNoRewards(ShowResult result) {
         switch (result) {
             case ShowResult.Finished:
@@ -89,5 +90,5 @@ public class AdsManager : MonoBehaviour {
         GameManager.PlayAgain();
         
     }
-
+    */
 }

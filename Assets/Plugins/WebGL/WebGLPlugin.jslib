@@ -64,6 +64,7 @@ mergeInto(LibraryManager.library, {
       stringToUTF8(isWork, bufferWork, bufferSizeWork);
       return bufferWork;
    },
+   /*
       // Function GetTypeDevice(add ksimaster)
    GetTypeDevice: function () {
       //var player;
@@ -78,7 +79,7 @@ mergeInto(LibraryManager.library, {
       var bufferDevice = _malloc(bufferSizeDevice);
       stringToUTF8(isDesktop, bufferDevice, bufferSizeDevice);
       return bufferDevice;
-   },
+   },*/
    // Function InterstitialFunction (add ksimaster)
    InterstitialFunction: function () {
       // Show a message as an alert
