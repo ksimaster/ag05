@@ -14,7 +14,7 @@ public class ADScript : MonoBehaviour
     public string nameScene;
     public GameObject panelLoose;
     public GameObject panelWin;
-    //public GameObject panelReward;
+    public GameObject panelReward;
     // public Text textCoin;
     //public GameObject adsWinError;
    // public GameObject adsLoseError;
@@ -91,7 +91,7 @@ public class ADScript : MonoBehaviour
 #if UNITY_WEBGL && !UNITY_EDITOR
     	WebGLPluginJS.RewardFunction();
 #endif
-        // panelReward.SetActive(true);
+        
         /*
          coin = int.Parse(textCoin.text);
          coin += 500;
@@ -99,8 +99,16 @@ public class ADScript : MonoBehaviour
          */
         //PlayerPrefs.SetInt("ShowReward", 1);
         GameManager.Revive();
+        Time.timeScale = 0;
+         panelReward.SetActive(true);
         // sliderHome.value += rewardBonusSliderHome;
         //if(sliderFuelCar.value<=lowBalanceFuel) sliderFuelCar.value += rewardBonusSliderFuel;
+    }
+
+    public void GamePlay()
+    {
+        panelReward.SetActive(false);
+        Time.timeScale = 1;
     }
 
     //Change language
