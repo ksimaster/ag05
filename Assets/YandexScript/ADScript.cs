@@ -98,7 +98,7 @@ public class ADScript : MonoBehaviour
          textCoin.text = coin.ToString();
          */
         //PlayerPrefs.SetInt("ShowReward", 1);
-        GameManager.Revive();
+        
         Time.timeScale = 0;
          panelReward.SetActive(true);
         // sliderHome.value += rewardBonusSliderHome;
@@ -107,8 +107,10 @@ public class ADScript : MonoBehaviour
 
     public void GamePlay()
     {
+        GameManager.Revive();
         panelReward.SetActive(false);
         Time.timeScale = 1;
+
     }
 
     //Change language
