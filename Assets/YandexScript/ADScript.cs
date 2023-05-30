@@ -28,6 +28,7 @@ public class ADScript : MonoBehaviour
     //public Button outScene;
     //private int coin;
     private int i;
+    private int j;
 
     IEnumerator Pause()
     {
@@ -63,8 +64,10 @@ public class ADScript : MonoBehaviour
     IEnumerator MicroPause()
     {
         
-        yield return new WaitForSeconds(0.3f);
-        
+        yield return new WaitForSeconds(3f);
+        reward.gameObject.SetActive(true);
+        repeat.gameObject.SetActive(true);
+        mainMenu.gameObject.SetActive(true);
     }
     public void ShareFriend(){
 #if UNITY_WEBGL && !UNITY_EDITOR
@@ -127,7 +130,8 @@ public class ADScript : MonoBehaviour
             i+=1;
             ShowAdInterstitialLogPause();
         }
-        if (panelWin.activeSelf) panelLoose.SetActive(false);
+        //if (panelWin.activeSelf) panelLoose.SetActive(false);
+        if (!panelLoose.activeSelf) i = 0;
     }
     private void OnApplicationFocus(bool focus)
     {

@@ -75,16 +75,16 @@ public class GameManager : MonoBehaviour {
     private static DataController dc;
 
     private static GameObject death;
-
-    private static Button tryAgainButton;
+    
+    public static Button tryAgainButton;
     //private static Button submitButton;
-    private static Button watchAdButton;
-    private static Button giveUpButton;
-    private static Button shareButton;
+    public static Button watchAdButton;
+    //public static Button giveUpButton;
+   // public static Button shareButton;
     public GameObject pauseButton;
 
     //private static InputField submitName;
-    private static Button mainMenuButton;
+    public static Button mainMenuButton;
 
     private static GameObject mainMenuBtnObj;
     private static Vector3 mainMenuPosition;
@@ -160,13 +160,13 @@ public class GameManager : MonoBehaviour {
         comboUp = GameObject.Find("ComboUp").GetComponent<AudioSource>();
 
         // поиск кнопок и текстов, заменяем на загрузку в скрипт
-        //tryAgainButton = GameObject.Find("Try Again Button").GetComponent<Button>();
+        tryAgainButton = GameObject.Find("Try Again Button").GetComponent<Button>();
         //submitName = GameObject.Find("SubmitName").GetComponent<InputField>();
         //submitButton = GameObject.Find("SubmitButton").GetComponent<Button>();
-       // mainMenuButton = GameObject.Find("Main Menu Button").GetComponent<Button>();
-       // watchAdButton = GameObject.Find("WatchAdButton").GetComponent<Button>();
+        mainMenuButton = GameObject.Find("Main Menu Button").GetComponent<Button>();
+        watchAdButton = GameObject.Find("WatchAdButton").GetComponent<Button>();
        // giveUpButton = GameObject.Find("GiveUpButton").GetComponent<Button>();
-        //scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
+        scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
         //shareButton = GameObject.Find("Share Button").GetComponent<Button>();
         //конец поиска кнопок и текстов
         //mainMenuBtnObj = mainMenuButton.gameObject;
@@ -322,8 +322,8 @@ public class GameManager : MonoBehaviour {
                 //submitButton.gameObject.SetActive(false);
                 tryAgainButton.gameObject.SetActive(false);
                 watchAdButton.gameObject.SetActive(false);
-                giveUpButton.gameObject.SetActive(false);
-                shareButton.gameObject.SetActive(false);
+                //giveUpButton.gameObject.SetActive(false);
+                //shareButton.gameObject.SetActive(false);
 
 
                 //mainMenuPosition = initiatedMenuPosition;
@@ -381,7 +381,7 @@ public class GameManager : MonoBehaviour {
         //tryAgainButton.gameObject.SetActive(false);
         //scoreBoard.enabled = false;
         //multiplierBoard.enabled = false;
-        //death.SetActive(true);
+        death.SetActive(true);
 
         //submitName.ActivateInputField();
 
@@ -402,7 +402,7 @@ public class GameManager : MonoBehaviour {
         //score = 0;
         //lives = maxLives;
         SoundManager.musicInitialized = false;
-        SetGameState(GameState.gameStarted);
+       // SetGameState(GameState.gameStarted);
         SetLifePoints();
         UpdateScore();
         //UpdateLives();
@@ -643,7 +643,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public static void ShowAdButtons(bool show) {
-        giveUpButton.gameObject.SetActive(show);
+        //giveUpButton.gameObject.SetActive(show);
         watchAdButton.gameObject.SetActive(show);
     }
 
@@ -657,7 +657,7 @@ public class GameManager : MonoBehaviour {
     public static void ShowTryAgainButtons(bool show) {
         tryAgainButton.gameObject.SetActive(show);
         mainMenuButton.gameObject.SetActive(show);
-        shareButton.gameObject.SetActive(show);
+       // shareButton.gameObject.SetActive(show);
     }
 
     public static void SetTargetFrameRate() {
