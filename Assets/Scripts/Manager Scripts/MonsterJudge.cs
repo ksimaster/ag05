@@ -212,11 +212,11 @@ public class MonsterJudge : MonoBehaviour
 
         if (detectedALineType)
         {
-            Debug.Log("Grid detected: " + detectedType.ToString());
+            // Debug.Log("Grid detected: " + detectedType.ToString());
         }
         else
         {
-            Debug.Log("Grid does not detect");
+            // Debug.Log("Grid does not detect");
         }
 
         if (!monsterGotDamaged && !GameManager.hitModeChangeBlob)

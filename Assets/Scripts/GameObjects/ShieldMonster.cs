@@ -10,7 +10,7 @@ public class ShieldMonster : Monster {
         MonsterMove();
         DestroyIfOutOfBounds(false);
         if(health == 0) {
-            if (debug) Debug.Log("You killed a shield");
+            // if (debug) Debug.Log("You killed a shield");
             GameManager.shielded = true;
             gameObject.SetActive(false);
         }

@@ -10,7 +10,7 @@ public class HealMonster2 : Monster {
         MonsterMove();
         DestroyIfOutOfBounds(false);
         if (health == 0) {
-            Debug.Log("Evil vanquished.");
+            // Debug.Log("Evil vanquished.");
             GameManager.IncrementScore(points);
             if (GameManager.lives < GameManager.maxLives) {
                 GameManager.lives += amountHealed;

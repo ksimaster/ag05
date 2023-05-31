@@ -14,7 +14,7 @@ public class ExplodeMonster2 : Monster {
         MonsterMove();
         DestroyIfOutOfBounds(false);
         if (health == 0) {
-            Debug.Log("KABOOM");
+            // Debug.Log("KABOOM");
             explodeSound.Play();
             GameManager.KillAllMonsters(true);
         }

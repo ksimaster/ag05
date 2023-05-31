@@ -68,7 +68,7 @@ public class ItemSpawner : MonoBehaviour {
                 foreach (Monster m in allMonsters) {
                     Collider2D mCollider = m.gameObject.GetComponent<Collider2D>();
                     if (!gObj.Equals(m.gameObject) && itemCollider.bounds.Intersects(mCollider.bounds)) {
-                        Debug.Log("Item don't spawn because monster");
+                        // Debug.Log("Item don't spawn because monster");
                         gObj.SetActive(false);
                         break;
                     }
@@ -77,7 +77,7 @@ public class ItemSpawner : MonoBehaviour {
                 foreach (GameItem i in allItems) {
                     Collider2D iCollider = i.gameObject.GetComponent<Collider2D>();
                     if (!gObj.Equals(i.gameObject) && itemCollider.bounds.Intersects(iCollider.bounds)) {
-                        Debug.Log("Item don't spawn because item");
+                        // Debug.Log("Item don't spawn because item");
                         gObj.SetActive(false);
                         break;
                     }

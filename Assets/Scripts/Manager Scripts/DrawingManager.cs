@@ -51,7 +51,7 @@ public class DrawingManager : MonoBehaviour {
             if(s_instance == null) {
                 GameObject obj = new GameObject("DrawingManager");
                 s_instance = obj.AddComponent(typeof(DrawingManager)) as DrawingManager;
-                Debug.Log("I created a DrawingManager on my own because I couldn't find any.");
+                // Debug.Log("I created a DrawingManager on my own because I couldn't find any.");
             }
             return s_instance;
         }

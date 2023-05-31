@@ -121,7 +121,7 @@ public class DrawSpawn : MonoBehaviour
         {
             result += s;
         }
-        Debug.Log(result);
+        //  Debug.Log(result);
 
         //imageOfGrid.enabled = true;
         hitlist.Clear();

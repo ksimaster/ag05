@@ -36,7 +36,7 @@ public class Pause : MonoBehaviour {
             {
                 GameObject obj = new GameObject("Pause");
                 _instance = obj.AddComponent(typeof(Pause)) as Pause;
-                Debug.Log("Created a Pause.");
+                // Debug.Log("Created a Pause.");
             }
             return _instance;
         }

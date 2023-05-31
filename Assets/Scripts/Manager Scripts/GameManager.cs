@@ -387,7 +387,7 @@ public class GameManager : MonoBehaviour {
 
         string scoreString = score.ToString();
         scoreText.text = scoreString;
-        Debug.Log("お前はもう死んでいる");
+        // Debug.Log("お前はもう死んでいる");
 
         //death.GetComponentInChildren<Text>().text = gameOverText;
     }
@@ -594,14 +594,14 @@ public class GameManager : MonoBehaviour {
         //GameObject[] MonsterObjectList = GameObject.FindGameObjectsWithTag("Monsters");
         var MonsterObjectList = FindObjectsOfType<Monster>();
         foreach (Monster m in MonsterObjectList) {
-            Debug.Log("Destroyed monsters");
+            // Debug.Log("Destroyed monsters");
             m.gameObject.SetActive(false);
         }
 
         //GameObject[] GameItemObjectList = GameObject.FindGameObjectsWithTag("GameItem");
         var GameItemObjectList = FindObjectsOfType<GameItem>();
         foreach (GameItem sm in GameItemObjectList) {
-            Debug.Log("Destroyed Sideways monsters");
+            // Debug.Log("Destroyed Sideways monsters");
             sm.gameObject.SetActive(false);
             //Destroy(sm.gameObject);
         }
@@ -612,14 +612,14 @@ public class GameManager : MonoBehaviour {
         var MonsterObjectList = FindObjectsOfType<Monster>();
         foreach (Monster m in MonsterObjectList) {
             if (explode) Instantiate(m.myExplosion, m.transform.position, Quaternion.identity);
-            Debug.Log("Destroyed monsters");
+            // Debug.Log("Destroyed monsters");
             m.gameObject.SetActive(false);
         }
 
         //GameObject[] GameItemObjectList = GameObject.FindGameObjectsWithTag("GameItem");
         var GameItemObjectList = FindObjectsOfType<GameItem>();
         foreach (GameItem sm in GameItemObjectList) {
-            Debug.Log("Destroyed Sideways monsters");
+            // Debug.Log("Destroyed Sideways monsters");
             sm.gameObject.SetActive(false);
             //Destroy(sm.gameObject);
         }

@@ -22,7 +22,7 @@ public class SoundSettings : MonoBehaviour {
 	
 	// Update is called once per frame
     void ChangeSFXVolume(float vol) {
-        Debug.Log("SFX vol: "+vol);
+        Debug.Log("SFX volume: " + vol);
         PlayerPrefs.SetFloat("sfxVolume", vol);
         OnSFXVolumeChange(vol);
     }
@@ -30,7 +30,7 @@ public class SoundSettings : MonoBehaviour {
     public static event WhenSFXVolumeChange OnSFXVolumeChange;
 
     void ChangeMusicVolume(float vol) {
-        Debug.Log("Music vol: " + vol);
+        Debug.Log("Music volume: " + vol);
         PlayerPrefs.SetFloat("musicVolume", vol);
         OnMusicVolumeChange(vol);
     }

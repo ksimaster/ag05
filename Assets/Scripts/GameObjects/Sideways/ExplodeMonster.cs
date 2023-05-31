@@ -18,7 +18,7 @@ public class ExplodeMonster : GameItem {
         ItemMove();
         //DestroyIfOutOfBounds();
         if (!isAlive) {
-            Debug.Log("KABOOM");
+            // Debug.Log("KABOOM");
             explodeSound.Play();
             GameManager.KillAllMonsters();
             //Destroy(gameObject);

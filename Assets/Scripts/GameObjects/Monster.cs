@@ -113,7 +113,7 @@ public class Monster : MonoBehaviour {
     
     public void DestroyIfOutOfBounds(bool hurt) {
         if (Camera.main.WorldToScreenPoint(transform.localPosition).y < -20) {
-            Debug.Log("An enemy has escaped!");
+            // Debug.Log("An enemy has escaped!");
             if (hurt) {
                 gm.LoseLife();
                 if(GameManager.lives <= 0) {
