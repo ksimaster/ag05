@@ -64,10 +64,8 @@ public class ADScript : MonoBehaviour
     IEnumerator MicroPause()
     {
         
-        yield return new WaitForSeconds(3f);
-        reward.gameObject.SetActive(true);
-        repeat.gameObject.SetActive(true);
-        mainMenu.gameObject.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        panelReward.SetActive(true);
     }
     public void ShareFriend(){
 #if UNITY_WEBGL && !UNITY_EDITOR
@@ -99,8 +97,8 @@ public class ADScript : MonoBehaviour
          */
         //PlayerPrefs.SetInt("ShowReward", 1);
         
-        Time.timeScale = 0;
-         panelReward.SetActive(true);
+        //Time.timeScale = 0;
+        StartCoroutine("MicroPause"); 
         // sliderHome.value += rewardBonusSliderHome;
         //if(sliderFuelCar.value<=lowBalanceFuel) sliderFuelCar.value += rewardBonusSliderFuel;
     }
