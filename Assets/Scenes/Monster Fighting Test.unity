@@ -2066,11 +2066,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: dafcc99eebce142df85c11edbe5d5c75, type: 3}
   - {fileID: 21300000, guid: 2cef5ee53705a41fa8fc52bcd7ec1f20, type: 3}
   - {fileID: 21300000, guid: 0cdeeb44770124ba1b838fc61304d019, type: 3}
-  - {fileID: 21300000, guid: 893b4b50d2a9e4cbbac2d0d76428501a, type: 3}
-  - {fileID: 21300000, guid: c8d3435b71ceb4a8da3839f443c694cb, type: 3}
   - {fileID: 21300000, guid: 168cded108bca4cfcaf472e061021312, type: 3}
   - {fileID: 21300000, guid: 9b31c8fa7312b4d4eb3cd6f05d9239c8, type: 3}
-  - {fileID: 21300000, guid: eb979716ca96b47a2ab49302575ca905, type: 3}
   fullHeart: {fileID: 21300000, guid: 304332fc1ed534b08ade668a87eee168, type: 3}
   deadHeart: {fileID: 21300000, guid: 64da96cbf632e4a538b6be490b513366, type: 3}
   lifePoint1: {fileID: 21300000, guid: 48a839ddccb824846998644f0fd22376, type: 3}

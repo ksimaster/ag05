@@ -33,11 +33,11 @@ public class DrawingManager : MonoBehaviour {
         //D,
         E,
         G,
-        M,
-        N,
+        //M,
+        //N,
         O,
         S,
-        W,
+        //W,
         nothing,
         dot
     }

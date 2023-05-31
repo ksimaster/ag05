@@ -6,15 +6,15 @@ public class CongaMonster : Monster {
 
     //public GameObject CongaLineBlob;
     public static List<List<DrawingManager.LineType>> congaWords = new List<List<DrawingManager.LineType>>{
-         new List<DrawingManager.LineType> {DrawingManager.LineType.caret, DrawingManager.LineType.N, DrawingManager.LineType.G, DrawingManager.LineType.E, DrawingManager.LineType.upLeftCorner},
-        new List<DrawingManager.LineType> {DrawingManager.LineType.lesserThan, DrawingManager.LineType.O, DrawingManager.LineType.N, DrawingManager.LineType.G, DrawingManager.LineType.caret},
+         new List<DrawingManager.LineType> {DrawingManager.LineType.caret, DrawingManager.LineType.O, DrawingManager.LineType.G, DrawingManager.LineType.E, DrawingManager.LineType.upLeftCorner},
+        new List<DrawingManager.LineType> {DrawingManager.LineType.lesserThan, DrawingManager.LineType.O, DrawingManager.LineType.O, DrawingManager.LineType.G, DrawingManager.LineType.caret},
         //new List<DrawingManager.LineType> {DrawingManager.LineType.D, DrawingManager.LineType.caret, DrawingManager.LineType.N, DrawingManager.LineType.lesserThan, DrawingManager.LineType.E},
-        new List<DrawingManager.LineType> {DrawingManager.LineType.G, DrawingManager.LineType.caret, DrawingManager.LineType.M, DrawingManager.LineType.E, DrawingManager.LineType.S},
-        new List<DrawingManager.LineType> {DrawingManager.LineType.S, DrawingManager.LineType.downLeftCorner, DrawingManager.LineType.straightV, DrawingManager.LineType.M, DrawingManager.LineType.E},
-        new List<DrawingManager.LineType> {DrawingManager.LineType.M, DrawingManager.LineType.O, DrawingManager.LineType.vShape, DrawingManager.LineType.E, DrawingManager.LineType.S},
-        new List<DrawingManager.LineType> {DrawingManager.LineType.upLeftCorner, DrawingManager.LineType.caret, DrawingManager.LineType.N, DrawingManager.LineType.G, DrawingManager.LineType.E},
-        new List<DrawingManager.LineType> {DrawingManager.LineType.downLeftCorner, DrawingManager.LineType.straightV, DrawingManager.LineType.N, DrawingManager.LineType.E, DrawingManager.LineType.S},
-        new List<DrawingManager.LineType> {DrawingManager.LineType.W, DrawingManager.LineType.upLeftCorner, DrawingManager.LineType.O, DrawingManager.LineType.N, DrawingManager.LineType.G},
+        new List<DrawingManager.LineType> {DrawingManager.LineType.G, DrawingManager.LineType.caret, DrawingManager.LineType.G, DrawingManager.LineType.E, DrawingManager.LineType.S},
+        new List<DrawingManager.LineType> {DrawingManager.LineType.S, DrawingManager.LineType.downLeftCorner, DrawingManager.LineType.straightV, DrawingManager.LineType.O, DrawingManager.LineType.E},
+        new List<DrawingManager.LineType> {DrawingManager.LineType.straightV, DrawingManager.LineType.O, DrawingManager.LineType.vShape, DrawingManager.LineType.E, DrawingManager.LineType.S},
+        new List<DrawingManager.LineType> {DrawingManager.LineType.upLeftCorner, DrawingManager.LineType.caret, DrawingManager.LineType.O, DrawingManager.LineType.G, DrawingManager.LineType.E},
+        new List<DrawingManager.LineType> {DrawingManager.LineType.downLeftCorner, DrawingManager.LineType.straightV, DrawingManager.LineType.E, DrawingManager.LineType.E, DrawingManager.LineType.S},
+        new List<DrawingManager.LineType> {DrawingManager.LineType.G, DrawingManager.LineType.upLeftCorner, DrawingManager.LineType.O, DrawingManager.LineType.O, DrawingManager.LineType.G},
         
     };
 
