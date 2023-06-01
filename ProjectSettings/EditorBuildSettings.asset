@@ -11,13 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Monster Fighting Test.unity
     guid: dc41117d7433be542afa90d5dfdfb26b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scoreboard.unity
     guid: 9b11e3e9657ab4bb0b7f3c515f28bafc
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: e01fe8cc4c437d146b33cbf7ceca4d75
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Credits.unity
     guid: 4f4859d170e754171b580c9efb3b9b65
   - enabled: 1
