@@ -18,11 +18,11 @@ public class BestScore : MonoBehaviour
     }
 
     public void UpdateScore() {
-        if (dataController.GetPlayerScores().Count > 0 && PlayerPrefs.GetInt("HighScore") <= dataController.GetPlayerScores().Count) {
+        if (dataController.GetPlayerScores().Count > 0 && PlayerPrefs.GetInt("HighScore") <= dataController.GetPlayerScores()[0].playerScore) {
             bestScore.text = "ЛУЧШИЙ РЕЗУЛЬТАТ : " + dataController.GetPlayerScores()[0].playerScore;
             PlayerPrefs.SetInt("HighScore", dataController.GetPlayerScores()[0].playerScore);
         } else {
-            bestScore.text = "ЛУЧШИЙ РЕЗУЛЬТАТ : 0";
+            bestScore.text = "ЛУЧШИЙ РЕЗУЛЬТАТ : " + PlayerPrefs.GetInt("HighScore");
         }
     }
 
