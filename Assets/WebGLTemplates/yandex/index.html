@@ -16,7 +16,7 @@
     function showAdInterstitial() {
       console.log('show Ad Interstitial');
       sdk.adv.showFullscreenAdv({
-    callbacks: {
+      callbacks: {
         onClose: function(wasShown) {
           // some action after close
          isAds = 'off';
@@ -35,8 +35,8 @@
           isAds = 'on';
          // isAdsWork = 'on';
         }
-    }
-});
+        }
+      });
       
     }
     
@@ -128,11 +128,21 @@
     var sdk = null;
     var lang = null;
     var isDevice = null;
-    YaGames.init()
+    var player;
+
+    // инициализация игрока (вызывается через другие функции)
+    function initPlayer() {
+      return sdk.getPlayer().then(_player => {
+        player = _player;
+        return player;
+      });
+    }
+	
+	YaGames.init()
     .then(ysdk => {
       console.log('Yandex SDK initialized');
       sdk = ysdk;
-      initPlayer();
+      initPlayer().then(() =>
       /*
       if(sdk.deviceInfo.isDesktop())
       {
@@ -140,25 +150,20 @@
       }
       */
       //console.log(sdk.deviceInfo.isDesktop());
-      showAdInterstitial();
-      if (!(player.getMode() === 'lite')) 
-        {
-          setAuth();
-         } 
+      {
+		  if (!!player && !(player.getMode() === 'lite')) 
+		  {
+			setAuth();
+		  }	  
+	  });
+	  showAdInterstitial();
+       
       });
-    var player;
-    // инициализация игрока (вызывается через другие функции)
-    function initPlayer() {
-      return sdk.getPlayer().then(_player => {
-        player = _player;
 
-        return player;
-      });
-    }
     //функция авторизации (вызывается через другие функции)
     function auth(){
       initPlayer().then(_player => {
-        if (_player.getMode() === 'lite') {
+        if (!!_player && _player.getMode() === 'lite') {
             // Игрок не авторизован.
             sdk.auth.openAuthDialog().then(() => {
                     // Игрок успешно авторизован
