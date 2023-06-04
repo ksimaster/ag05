@@ -34,7 +34,7 @@ public class Lederboard : MonoBehaviour
     {
         // HighScore();
 
-        if (DeathPanel.activeSelf && i > 0) 
+        if (DeathPanel.activeSelf && i < 1) 
         {
             SetHighScoreOnLederboard();
             i+=1;
